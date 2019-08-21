@@ -1,0 +1,28 @@
+require 'test_helper'
+
+module Workarea
+  decorate Storefront::ProductViewModelTest, with: :inventory_notifications do
+    def test_unavailable_sku_options_returns_options_of_sold_out_variants
+      @product.variants.build(sku: 'SKU1', name: 'name', details: { 'foo' => 'bar' })
+      @product.variants.build(sku: 'SKU2', name: 'name', details: { 'foo' => 'bar' })
+      @product.save
+      create_inventory(id: 'SKU1', available: 0, policy: 'allow_notify')
+      create_inventory(id: 'SKU2', available: 100, policy: 'allow_notify')
+
+      view_model = Storefront::ProductViewModel.new(@product, sku: 'SKU1')
+      assert(view_model.unavailable_sku_options.size == 1)
+      assert(view_model.unavailable_sku_options.first, ['SKU1 - Foo: bar', 'SKU1'])
+    end
+
+    def test_current_sku_unavailable_returns_true_if_current_sku_is_sold_out
+      @product.variants.build(sku: 'SKU', name: 'name', details: { 'foo' => 'bar' })
+      @product.variants.build(sku: 'SKU2', name: 'name', details: { 'foo' => 'bar' })
+      @product.save
+      create_inventory(id: 'SKU', available: 0, policy: 'allow_notify')
+      create_inventory(id: 'SKU2', available: 100, policy: 'allow_notify')
+
+      view_model = Storefront::ProductViewModel.new(@product, sku: 'SKU')
+      assert(view_model.current_sku_unavailable?)
+    end
+  end
+end

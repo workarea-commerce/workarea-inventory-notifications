@@ -1,0 +1,19 @@
+- @title = t('workarea.storefront.inventory_notifications.new.title', product: @product.browser_title)
+
+.signup-notification.view
+
+  %h1= t('workarea.storefront.inventory_notifications.new.title', product: @product.browser_title)
+
+  = form_tag create_product_inventory_notification_path(@product), method: 'post', id: 'inventory_notification_form' do
+
+    %p= t('workarea.storefront.inventory_notifications.new.instruction')
+
+    = hidden_field_tag "notification[product_id]", @product.id
+    .property
+      = label_tag "notification_sku", t('workarea.storefront.inventory_notifications.new.select_options'), class: 'property__name'
+      .value= select_tag "notification[sku]", options_for_select(@product.unavailable_sku_options, params.fetch(:notification, {})[:sku]), required: true
+    .property
+      = label_tag "notification_email", t('workarea.admin.fields.email'), class: 'property__name'
+      .value= email_field_tag "notification[email]", current_user.try(:email), class: 'text-box', required: true, placeholder: t('workarea.storefront.forms.email_placeholder')
+
+    %p.add-to-notify-action= button_tag t('workarea.storefront.inventory_notifications.notify_me'), value: 'add_notification', class: 'button button--large'

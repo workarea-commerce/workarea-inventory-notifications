@@ -1,0 +1,22 @@
+en:
+  workarea:
+    storefront:
+      inventory_notifications:
+        flash_messages:
+          saved: You will be notified when this item becomes available.
+          error: Notification sign up failed. Please try again.
+        new:
+          instruction: To receive a notification of when the item comes back in stock, select an option and enter your email address below
+          select_options: Select options
+          title: "Sign up to be notified when %{product} comes back in stock"
+        notify_me: Notify Me
+      products:
+        this_item_is_out_of_stock: This item is out of stock.
+        inventory_notification_prompt: To receive a notification of when the item comes back in stock
+        enter_email_address_below: enter your email address below.
+        sign_up_for_email_notification: sign up for an email notification
+      restock_mailer:
+        heading: "%{product_name} is back in stock."
+        message: Get yours today!
+        product: Product
+        subject: Product back in stock

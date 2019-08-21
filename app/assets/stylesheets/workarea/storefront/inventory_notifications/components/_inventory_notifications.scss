@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #INVENTORY-NOTIFICATIONS
+\*------------------------------------*/
+
+
+.inventory-notifications {}
+
+    .inventory-notifications__signup {
+        display: none;
+
+        .js & {
+            display: block;
+        }
+    }

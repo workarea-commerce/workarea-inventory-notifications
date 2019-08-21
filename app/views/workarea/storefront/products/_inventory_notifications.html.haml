@@ -1,0 +1,8 @@
+- if product.current_sku_unavailable?
+  #inventory_notifications.inventory-notifications
+    .inventory-notifications__signup
+      %p
+        %strong= t('workarea.storefront.products.this_item_is_out_of_stock')
+      %p
+        = t('workarea.storefront.products.inventory_notification_prompt')
+        = link_to t('workarea.storefront.products.sign_up_for_email_notification'),  storefront.new_product_inventory_notification_path(product), data: { dialog_button: '' }

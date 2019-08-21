@@ -1,0 +1,14 @@
+= t('workarea.storefront.restock_mailer.heading', product_name: @product.name)
+\===========================================
+
+= "\r\n"
+
+= t('workarea.storefront.restock_mailer.message')
+= product_url(@product)
+
+= "\r\n"
+
+= t('workarea.storefront.restock_mailer.product')
+\=======
+= @product.name
+\- #{@variant.sku}

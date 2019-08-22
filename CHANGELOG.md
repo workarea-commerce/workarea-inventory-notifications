@@ -1,7 +1,14 @@
+Workarea Inventory Notifications 2.1.3 (2019-08-22)
+--------------------------------------------------------------------------------
+
+*   Open Source! For real!
+
+
+
 Workarea Inventory Notifications 2.1.2 (2019-08-21)
 --------------------------------------------------------------------------------
 
-*   Open Source!
+*   Open Source! lol jk
 
 
 

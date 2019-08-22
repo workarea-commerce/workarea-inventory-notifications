@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Workarea::InventoryNotifications::VERSION
   s.authors     = ['Eric Pigeon']
   s.email       = ['epigeon@weblinc.com']
-  s.homepage    = 'http://www.workarea.com'
+  s.homepage    = 'https://github.com/workarea-commerce/workarea-inventory_notifications'
   s.summary     = 'Inventory Notifications plugin for the Workarea ecommerce platform'
   s.description = 'Plugin for product inventory notifications on the Workarea ecommerce platform.'
   s.files       = `git ls-files`.split("\n")

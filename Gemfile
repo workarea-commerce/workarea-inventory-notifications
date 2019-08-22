@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-source 'https://gems.weblinc.com'
+git_source(:github) { |repo| "git@github.com:#{repo}.git" }
 
 # Declare your gem's dependencies in api.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
@@ -14,4 +14,4 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-gem "workarea", source: 'https://gems.weblinc.com'
+gem "workarea"

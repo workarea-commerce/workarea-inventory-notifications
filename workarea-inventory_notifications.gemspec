@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Inventory Notifications plugin for the Workarea ecommerce platform'
   s.description = 'Plugin for product inventory notifications on the Workarea ecommerce platform.'
   s.files       = `git ls-files`.split("\n")
+  s.license = 'Business Software License'
 
   s.required_ruby_version = '>= 2.3.0'
 

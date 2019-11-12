@@ -14,4 +14,4 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-gem "workarea"
+gem 'workarea', github: 'workarea-commerce/workarea'

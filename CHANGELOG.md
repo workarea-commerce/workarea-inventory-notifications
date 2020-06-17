@@ -1,3 +1,13 @@
+Workarea Inventory Notifications 2.1.5 (2020-06-17)
+--------------------------------------------------------------------------------
+
+*   Scope routes to include locale
+
+
+    Ben Crouse
+
+
+
 Workarea Inventory Notifications 2.1.4 (2020-06-17)
 --------------------------------------------------------------------------------
 
